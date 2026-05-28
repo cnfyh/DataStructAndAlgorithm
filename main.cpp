@@ -2,15 +2,16 @@
 #include "BinTree.hpp"
 #include <array>
 #include <iostream>
-
+#include <vector>
+#include "mysort.hpp"
 #include "Myheap.hpp"
 
 int main(){
-    std::array<int, 5> arr={42,5,1,7,8};
-    MyHeap h1(MIN_HEAP);
+    std::vector<int> arr={42,5,1,7,8};
+    MySort m1;
+    m1.selectionSort(arr);
     for (int num : arr) {
-        h1.heap_push(num);
+        std::cout<<num<<'\n';
     }
-    std::cout<<h1.peek(); 
     return 0;
 }
