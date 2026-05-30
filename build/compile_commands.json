@@ -1,0 +1,32 @@
+[
+{
+  "directory": "D:/C++Project/DataStructAndAlgorithm/build",
+  "command": "C:\\mingw64\\bin\\c++.exe -ID:/C++Project/DataStructAndAlgorithm/include -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\a.dir\\src\\BinTree.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\a.dir\\src\\BinTree.cpp.obj -c D:\\C++Project\\DataStructAndAlgorithm\\src\\BinTree.cpp",
+  "file": "D:/C++Project/DataStructAndAlgorithm/src/BinTree.cpp",
+  "output": "D:/C++Project/DataStructAndAlgorithm/build/CMakeFiles/a.dir/src/BinTree.cpp.obj"
+},
+{
+  "directory": "D:/C++Project/DataStructAndAlgorithm/build",
+  "command": "C:\\mingw64\\bin\\c++.exe -ID:/C++Project/DataStructAndAlgorithm/include -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\a.dir\\src\\Myheap.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\a.dir\\src\\Myheap.cpp.obj -c D:\\C++Project\\DataStructAndAlgorithm\\src\\Myheap.cpp",
+  "file": "D:/C++Project/DataStructAndAlgorithm/src/Myheap.cpp",
+  "output": "D:/C++Project/DataStructAndAlgorithm/build/CMakeFiles/a.dir/src/Myheap.cpp.obj"
+},
+{
+  "directory": "D:/C++Project/DataStructAndAlgorithm/build",
+  "command": "C:\\mingw64\\bin\\c++.exe -ID:/C++Project/DataStructAndAlgorithm/include -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\a.dir\\src\\Mylist.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\a.dir\\src\\Mylist.cpp.obj -c D:\\C++Project\\DataStructAndAlgorithm\\src\\Mylist.cpp",
+  "file": "D:/C++Project/DataStructAndAlgorithm/src/Mylist.cpp",
+  "output": "D:/C++Project/DataStructAndAlgorithm/build/CMakeFiles/a.dir/src/Mylist.cpp.obj"
+},
+{
+  "directory": "D:/C++Project/DataStructAndAlgorithm/build",
+  "command": "C:\\mingw64\\bin\\c++.exe -ID:/C++Project/DataStructAndAlgorithm/include -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\a.dir\\src\\main.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\a.dir\\src\\main.cpp.obj -c D:\\C++Project\\DataStructAndAlgorithm\\src\\main.cpp",
+  "file": "D:/C++Project/DataStructAndAlgorithm/src/main.cpp",
+  "output": "D:/C++Project/DataStructAndAlgorithm/build/CMakeFiles/a.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/C++Project/DataStructAndAlgorithm/build",
+  "command": "C:\\mingw64\\bin\\c++.exe -ID:/C++Project/DataStructAndAlgorithm/include -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\a.dir\\src\\mysort.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\a.dir\\src\\mysort.cpp.obj -c D:\\C++Project\\DataStructAndAlgorithm\\src\\mysort.cpp",
+  "file": "D:/C++Project/DataStructAndAlgorithm/src/mysort.cpp",
+  "output": "D:/C++Project/DataStructAndAlgorithm/build/CMakeFiles/a.dir/src/mysort.cpp.obj"
+}
+]

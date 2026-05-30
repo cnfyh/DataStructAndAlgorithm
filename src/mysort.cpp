@@ -205,6 +205,9 @@ void MySort::heapSort(std::vector<int> &nums){
     }
 }
 /*堆排序  --大顶堆(原地排序，无需要额外空间)*/
+/*
+构建一个大顶堆，然后将堆顶与堆底互换，然后size-1，再次执行构建
+*/
 void MySort::heapSortnr(std::vector<int> &nums){
     auto leftindex=[](int pindex)->int{
         return 2*pindex+1;

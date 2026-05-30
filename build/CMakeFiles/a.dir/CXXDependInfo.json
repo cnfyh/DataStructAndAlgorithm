@@ -1,0 +1,50 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "D:/C++Project/DataStructAndAlgorithm/build",
+	"dir-cur-src" : "D:/C++Project/DataStructAndAlgorithm",
+	"dir-top-bld" : "D:/C++Project/DataStructAndAlgorithm/build",
+	"dir-top-src" : "D:/C++Project/DataStructAndAlgorithm",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"D:\\C++Project\\DataStructAndAlgorithm\\include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "D:/C++Project/DataStructAndAlgorithm/build/CMakeFiles/a.dir",
+	"sources" : 
+	{
+		"CMakeFiles/a.dir/src/BinTree.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "D:/C++Project/DataStructAndAlgorithm/src/BinTree.cpp"
+		},
+		"CMakeFiles/a.dir/src/Myheap.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "D:/C++Project/DataStructAndAlgorithm/src/Myheap.cpp"
+		},
+		"CMakeFiles/a.dir/src/Mylist.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "D:/C++Project/DataStructAndAlgorithm/src/Mylist.cpp"
+		},
+		"CMakeFiles/a.dir/src/main.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "D:/C++Project/DataStructAndAlgorithm/src/main.cpp"
+		},
+		"CMakeFiles/a.dir/src/mysort.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "D:/C++Project/DataStructAndAlgorithm/src/mysort.cpp"
+		}
+	}
+}

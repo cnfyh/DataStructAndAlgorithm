@@ -1,0 +1,11 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/a.dir/src/BinTree.cpp.obj: dyndep
+
+build CMakeFiles/a.dir/src/Myheap.cpp.obj: dyndep
+
+build CMakeFiles/a.dir/src/Mylist.cpp.obj: dyndep
+
+build CMakeFiles/a.dir/src/main.cpp.obj: dyndep
+
+build CMakeFiles/a.dir/src/mysort.cpp.obj: dyndep
+
