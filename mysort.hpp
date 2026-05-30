@@ -8,4 +8,6 @@ class MySort{
         void quicksort(std::vector<int> &nums,int left, int right);
         void mergesort(std::vector<int> &nums,int left,int right);
         void mergesortnr(std::vector<int> &nums,int left,int right);
+        void heapSort(std::vector<int> &nums);
+        void heapSortnr(std::vector<int> &nums);
 };

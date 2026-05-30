@@ -146,3 +146,104 @@ void MySort::mergesortnr(std::vector<int> &nums, int left, int right) {
         }
     }
 }
+/*堆排序  --小顶堆(空间复杂度为O(n))*/
+void MySort::heapSort(std::vector<int> &nums){
+    std::vector<int> heaparr;
+    auto leftindex=[](int pindex)->int{
+        return 2*pindex+1;
+    };
+    auto rightindex=[](int pindex)->int{
+        return 2*pindex+2;
+    };
+    auto pindex=[](int childindex)->int{
+        return (childindex-1)/2;
+    };
+    auto heap_push=[&](int val){
+        heaparr.push_back(val);
+        int valindex=heaparr.size()-1;
+        while (valindex>0) {
+            int p=pindex(valindex);
+            if (val<heaparr[p]) {
+                std::swap(heaparr[p],heaparr[valindex]);
+                valindex=p;
+            }else {
+                break;
+            }
+        }
+    };
+    auto heap_pop=[&]()->int{
+        int res=heaparr[0];
+        std::swap(heaparr[0],heaparr[heaparr.size()-1]);
+        heaparr.pop_back();
+        int root=0;
+        while (1) {
+            int target=root;
+            int l=leftindex(target);
+            int r=rightindex(target);
+            if (l< heaparr.size()) { //判断是否越界
+                if (heaparr[target]>heaparr[l]) {
+                    target=l;
+                }
+            }
+            if (r< heaparr.size()) { //判断是否越界
+                if (heaparr[target]>heaparr[r]) {
+                    target=r;
+                }
+            }
+            //如果到达叶子节点，左右孩子都越界，那么tar==root
+            if (target == root) break; 
+            std::swap(heaparr[root], heaparr[target]);
+            root = target;
+        }
+        return res;
+    };
+    for (int i=0; i<nums.size(); i++) {
+        heap_push(nums[i]);
+    }
+    for (int i=0; i<nums.size(); i++) {
+        nums[i]=heap_pop();
+    }
+}
+/*堆排序  --大顶堆(原地排序，无需要额外空间)*/
+void MySort::heapSortnr(std::vector<int> &nums){
+    auto leftindex=[](int pindex)->int{
+        return 2*pindex+1;
+    };
+    auto rightindex=[](int pindex)->int{
+        return 2*pindex+2;
+    };
+    auto pindex=[](int childindex)->int{
+        return (childindex-1)/2;
+    };
+    auto heapSort=[&leftindex,&rightindex,&pindex](std::vector<int> &nums,int size){
+        int p=pindex(size-1);
+        for (int i=p; i>=0; i--) {
+            while (1) {
+                int root=i;
+                int target=root;
+                int l=leftindex(target);
+                int r=rightindex(target);
+                if (l< size) { //判断是否越界
+                    if (nums[target]<nums[l]) {
+                        target=l;
+                    }
+                }
+                if (r< size) { //判断是否越界
+                    if (nums[target]<nums[r]) {
+                        target=r;
+                    }
+                }
+                //如果到达叶子节点，左右孩子都越界，那么tar==root
+                if (target == root) break; 
+                std::swap(nums[root], nums[target]);
+                root = target;
+            }
+        }
+        std::swap(nums[0], nums[size-1]);
+    };
+
+    for (int i=nums.size(); i>0; i--) {
+        heapSort(nums, i);
+    }
+}
+
