@@ -7,9 +7,9 @@
 #include "Myheap.hpp"
 
 int main(){
-    std::vector<int> arr={42,5,1,7,8};
+    std::vector<int> arr={42,5,15,7,8,45,78,6,8,85};
     MySort m1;
-    m1.selectionSort(arr);
+    m1.quicksort(arr,0,arr.size()-1);
     for (int num : arr) {
         std::cout<<num<<'\n';
     }
