@@ -65,3 +65,84 @@ void MySort::quicksort(std::vector<int> &nums,int left,int right) {
     quicksort(nums, left, i-1);
     quicksort(nums, i+1, right);
 }
+/*归并排序  递归版*/
+void MySort::mergesort(std::vector<int> &nums,int left,int right){
+    auto merge=[&nums](int left,int mid,int right){
+        //临时数组
+        std::vector<int>temp(right-left+1);
+        int i=left;
+        int j=mid+1;
+        int k=0;
+        //二者均为到边界时归并到临时数组
+        while (i<=mid && j<=right) {
+            if (nums[i]<=nums[j]) {
+                temp[k++]=nums[i++];
+            }else{
+                temp[k++]=nums[j++];
+            }
+        }
+        //将剩余有序元素赋值到临时数组中
+        while (i<=mid) {
+            temp[k++]=nums[i++];
+        }
+        while (j<=right) {
+            temp[k++]=nums[j++];
+        }
+        //将临时数组值覆盖到原数组
+        for (int i=0; i<k; i++) {
+            nums[left+i]=temp[i];
+        }
+    };
+    if (left>=right) {
+        return;
+    }
+    int mid=left+(right-left)/2;
+    //递归划分左右子树
+    mergesort(nums, left,  mid);
+    mergesort(nums, mid+1,  right);
+    //归并
+    merge(left,mid,right);
+}
+/*归并排序  非递归版（自底向上迭代）*/
+void MySort::mergesortnr(std::vector<int> &nums, int left, int right) {
+    if (left >= right) {
+        return;
+    }
+    auto merge = [&nums](int left, int mid, int right) {
+        std::vector<int> temp(right - left + 1);
+        int i = left;
+        int j = mid + 1;
+        int k = 0;
+        while (i <= mid && j <= right) {
+            if (nums[i] <= nums[j]) {
+                temp[k++] = nums[i++];
+            } else {
+                temp[k++] = nums[j++];
+            }
+        }
+        while (i <= mid) {
+            temp[k++] = nums[i++];
+        }
+        while (j <= right) {
+            temp[k++] = nums[j++];
+        }
+        for (int idx = 0; idx < k; ++idx) {
+            nums[left + idx] = temp[idx];
+        }
+    };
+    int n = right - left + 1;
+    // width: 已经排好序的数组宽度，初始时1个数为有序，每轮由于归并，会时其翻倍
+    for (int width = 1; width < n; width = 2*width) {
+        // 每次处理相邻的两个子数组 [l, mid] 和 [mid+1, r]
+        for (int l = left; l < right; l = 2 * width + l) {
+            //正常情况下左边界为l + width - 1，右边界为right，但是循环中会有越界现象
+            //std::min防止越界
+            int mid = std::min(l + width - 1, right);
+            int r   = std::min(l + 2 * width - 1, right);
+            //当不存在右边界时，跳过
+            if (mid < right) {
+                merge(l, mid, r);
+            }
+        }
+    }
+}
